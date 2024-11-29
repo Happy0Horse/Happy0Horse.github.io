@@ -1,0 +1,76 @@
+body {
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+}
+
+.main-content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+    background: linear-gradient(135deg, #a8c0ff 0%, #3f83f8 100%);
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #f8b400, #f75c03);
+    border: none;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #f75c03, #f8b400);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.5);
+    transform: scale(1.05);
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
