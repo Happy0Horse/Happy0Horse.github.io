@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./background.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: #fff;
+}
+
+#container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    width: 95%;
+    max-width: 600px;
+}
+
+#magic-ball {
+    width: 70vw;
+    height: 70vw;
+    max-width: 400px;
+    max-height: 400px;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.8), #000);
+    border: 5px solid #ff0000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px auto;
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.8);
+    position: relative;
+    overflow: hidden;
+}
+
+#magic-ball::before {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+    border-radius: 50%;
+    top: 5%;
+    left: 5%;
+    animation: pulse 2s infinite;
+}
+
+#answer {
+    font-size: 1.6rem;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    max-width: 80%;
+    margin: auto;
+}
+
+#question {
+    width: 60%;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#ask-button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background: linear-gradient(to bottom, #ff4444, #cc0000);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+}
+
+#ask-button:hover {
+    background: linear-gradient(to bottom, #cc0000, #990000);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+#redirect-button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background: linear-gradient(to bottom, #4444ff, #0000cc);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.8);
+}
+
+#redirect-button:hover {
+    background: linear-gradient(to bottom, #0000cc, #000099);
+}
