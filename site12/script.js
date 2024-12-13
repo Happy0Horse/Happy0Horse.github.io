@@ -39,6 +39,7 @@ $(document).ready(function () {
   let wrong = 0;
 
   function updateView() {
+	  $('#translation-input').prop('disabled', true);
     if (currentWords.length > 0) {
       $('#word-card').animate({ opacity: 0 }, 300, function () {
         $(this).text(currentWords[currentStep].word).animate({ opacity: 1 }, 300);
@@ -51,6 +52,7 @@ $(document).ready(function () {
     $('#total-steps').text(currentWords.length);
     $('#correct-count').text(correct);
     $('#wrong-count').text(wrong);
+	$('#translation-input').prop('disabled', false);
   }
 
   function handleAnswer(userInput) {
@@ -72,6 +74,7 @@ $(document).ready(function () {
 
   $("input[type='radio']").change(function () {
     let difficulty = $("input[name='difficulty']:checked").val();
+	$('#translation-input').prop('disabled', false);
     switch (difficulty) {
       case "easy":
         currentWords = allWords.slice(0, 10);
